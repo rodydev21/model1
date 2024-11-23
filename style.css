@@ -1,0 +1,372 @@
+/* إعداد الخطوط والألوان */
+/* إعداد الخطوط والألوان */
+body {
+    font-family: 'CustomFont', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('img/b2.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* شاشة النهاية */
+#end-screen {
+    font-family: 'CustomFont', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffe9a2, #fad0c4);
+    text-align: center;
+    padding: 20px;
+}
+
+#end-screen .game-title {
+    font-size: 4rem; /* تكبير النص */
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    animation: bounce 2s infinite;
+}
+
+
+#end-screen .score {
+    font-size: 2.5rem; /* حجم أكبر لعرض النتيجة */
+    color: #333;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#end-screen button {
+    margin-top: 20%;
+    font-size: 1.8rem; /* تكبير الزر */
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    background: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#end-screen button:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* تحسين استجابة شاشة النهاية */
+@media (max-width: 768px) {
+
+    #end-screen .game-title {
+        font-size: 3rem; /* تصغير النص للشاشات الصغيرة */
+    }
+
+    #end-screen .score {
+        font-size: 2rem;
+        padding: 10px 20px;
+    }
+
+    #end-screen button {
+        font-size: 1.5rem;
+        padding: 10px 30px;
+    }
+
+    #question-text {
+        font-family: 'CustomFont', sans-serif;
+        font-size: 0.9rem;
+        color: #333;
+    }
+}
+
+/* شاشة البداية */
+#start-screen {
+    font-family: 'CustomFont', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #fff7a4, #fad0c4);
+    text-align: center;
+}
+
+.game-title {
+    font-family: 'CustomFont', sans-serif;
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    animation: bounce 2s infinite;
+}
+
+button {
+    font-family: 'CustomFont', sans-serif;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    font-family: 'CustomFont', sans-serif;
+    transform: scale(1.1);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo-image, .logo-image-small {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* شاشة اللعبة */
+#game-screen {
+    font-family: 'CustomFont', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* العنوان */
+.score-board {
+    font-family: 'CustomFont', sans-serif;
+    font-size: 2rem;
+    color: #444;
+    background: #fcbd11cf;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* الأسئلة */
+#question-container {
+    font-family: 'CustomFont', sans-serif;
+    padding: 20px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+}
+
+/* الصور داخل السؤال */
+#question-images img {
+    max-width: 100px; /* يجعل الصورة تملأ 80% من عرض الحاوية */
+    height: auto; /* يحافظ على نسبة العرض إلى الارتفاع */
+    display: block; /* يزيل الهوامش غير الضرورية */
+    margin: 10px auto; /* يضيف تباعد ويضع الصورة في المنتصف */
+    border-radius: 10px; /* يجعل الحواف مستديرة قليلاً */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0); /* يضيف تأثير ظل */
+}
+
+/* النص */
+#question-text {
+    font-family: 'CustomFont', sans-serif;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* الأزرار */
+button {
+    font-family: 'CustomFont', sans-serif;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #2599ba;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: rgb(0, 73, 152);
+    transform: scale(1.1);
+}
+
+button.correct-answer {
+    background: #4caf50 !important;
+    color: white !important;
+    animation: correct-pulse 1s infinite;
+}
+
+button.wrong-answer {
+    background: #f44336 !important;
+    color: white !important;
+    animation: shake 0.5s;
+}
+
+#options-container button {
+    font-family: 'CustomFont', sans-serif;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #2599ba;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#options-container button:hover {
+    background: #2599ba;
+    transform: scale(1.1);
+}
+
+/* الفتافيت */
+#confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: fall 3s infinite;
+}
+
+/* تصميم نص رقم الهاتف */
+.contact-info {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ffc815;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* استجابة النص للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .contact-info {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@font-face {
+    font-family: 'CustomFont'; /* استبدل بـ اسم الخط الذي تفضله */
+    src: url(fonts/VIP\ Hala\ Bold\ VIP\ Hala\ Bold.otf) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/* أنيميشنات */
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes correct-pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0px rgba(72, 239, 128, 0.7);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(72, 239, 128, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0px rgba(72, 239, 128, 0.7);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    75% {
+        transform: translateX(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    #question-images img {
+        max-width: 90%; /* يجعل الصورة أصغر على الهواتف */
+        margin: 5px auto; /* يقلل الهوامش */
+    }
+}
+
+/* استجابة للشاشات الكبيرة */
+@media (min-width: 1024px) {
+    #question-images img {
+        max-width: 70%; /* يحد من عرض الصورة على الشاشات الكبيرة */
+    }
+}
